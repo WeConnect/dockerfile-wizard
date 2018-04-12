@@ -43,7 +43,7 @@ jobs:
 
       - run: bash scripts/generate.sh > Dockerfile
 
-      -run: docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASSWD
+      - run: docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASSWD
 
       - run: docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
 
